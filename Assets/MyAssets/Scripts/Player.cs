@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -79,7 +80,7 @@ public class Player : MonoBehaviour
 
     public void MudarVida(int quantia)
     {
-        vida += quantia;
+        vida = Math.Clamp(vida + quantia, 0, vidaMaxima);
         OnLifeChanged.Invoke();
     }
 
