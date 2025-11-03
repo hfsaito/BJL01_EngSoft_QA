@@ -41,3 +41,7 @@ Sendo assim, apenas quando o jogador encosta no inimigo por baixo ou pelos lados
 ![direções que se aplicaria dano](https://github.com/hfsaito/BJL01_EngSoft_QA/blob/main/reports/03/dir-dano.png?raw=true)
 
 ## Correção
+Faz mais sentido o jogador não sofrer dano se encostar por baixo, invertendo a situação atual. De `entryDir.y < 0.5f` para `entryDir.y > -0.5f`
+E adicionar o dano duplo em um ponto maior, minha sugestão é `entryDir.y > (Mathf.Sqrt(3) / 2)`, que é quando o angulo de contato é maior que 60 graus
+
+![direções que se aplicaria dano corrigido](https://github.com/hfsaito/BJL01_EngSoft_QA/blob/main/reports/03/fix.png?raw=true)
