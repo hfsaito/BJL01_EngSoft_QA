@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: CollectionTable_pt-BR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt-BR
+  m_SharedData: {fileID: 11400000, guid: 44b2ecc60566e384fb00c593346df173, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 30071070720
+    m_Localized: "Aperte \"W\" ou Espa\xE7o para pular"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157942816768
+    m_Localized: "Se voc\xEA cair na cabe\xE7a do inimigo, ele te causa dano em dobro!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335001165824
+    m_Localized: "Pegue cora\xE7\xF5es para recuperar vida"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50340604944384
+    m_Localized: Aperte "esc" para o abrir o menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52934496755712
+    m_Localized: Reiniciar
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
