@@ -13,20 +13,25 @@ Taxa de quadros estável
 
 ## Root cause
 Verificando o _profiling_, temos um pico na categoria `Others` seguido de uma grande carga em `Physics`
+
 ![Gráficos do profiling](https://github.com/hfsaito/BJL01_EngSoft_QA/blob/main/report01/profiling-graphs.png?raw=true)
 
 Verificando a parte _Hierarchy_ do _profiling_, é possível ver que a função `Instantiate` foi chamada 1500 vezes
+
 ![Hierarchy do profiling](https://github.com/hfsaito/BJL01_EngSoft_QA/blob/main/report01/profiling-hierarchy.png?raw=true)
 
 Procurando por `Instantiate` no código, cheguei no arquivo `Assets/EnemySpawner.cs` que instancia 1500 `GameObject`s a cada 10s
 
 No editor da Unity, clicando com botão direito no script `EnemySpawner` e depois em "Find references in scene", podemos ver que há um objeto chamado "Decor" usando este script.
+
 ![Hierarchy do profiling](https://github.com/hfsaito/BJL01_EngSoft_QA/blob/main/report01/Decor.png?raw=true)
 
 Investigando aonde este objeto é usado. Preque que é um elemento usado para agrupar outros game objects que são items, inimigos e decorações no cenário.
+
 ![Hierarchy do profiling](https://github.com/hfsaito/BJL01_EngSoft_QA/blob/main/report01/Decor-tree.png?raw=true)
 
 Como o `Instantiate` usa a posição do game object que possui o script, verifiquei a posição de `Decor` na cena apertando a tecla `F`
+
 ![Hierarchy do profiling](https://github.com/hfsaito/BJL01_EngSoft_QA/blob/main/report01/Decor-position.png?raw=true)
 
 ## Correção
