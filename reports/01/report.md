@@ -38,3 +38,5 @@ Como o `Instantiate` usa a posição do game object que possui o script, verifiq
 O script `EnemySpawner` deve ter sido feito para rodar um stress test de quantos inimigos conseguimos carregar porem foi esquecido. Os objetos agrupados pelo game object `Decor` não possuem relação com o script.
 
 Como o script `EnemySpawner` usa o posicionamento de `Decor` e seus objetos filhos não tem relação a correção é remover ou desabilitar o script `EnemySpawner`. Renomear `Decor` para identificarmos no editor de que se trata de um objeto de  teste, e mover seus game objects filhos para `Grid` assim evitando de se mover no objeto de teste afetar os objetos do level
+
+https://github.com/hfsaito/BJL01_EngSoft_QA/commit/7eaac0ed92216b71d66d63a1b7623dde3ca91f25
