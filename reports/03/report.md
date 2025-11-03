@@ -1,6 +1,7 @@
 # Report 03 - Dobro de dano ao cair na cabeça do inimigo
 ## Descrição
 A segunda instrução que o jogo passa é: _If you fall on enemy's head, it deals double damage_
+
 Porem ao cair na cabeça do inimigo o jogador não sofre dano algum
 
 ## Reprodução
@@ -36,7 +37,8 @@ Para entender melhor o vetor `entryDir` fiz o seguinte desenho
 ![vetor entryDir](https://github.com/hfsaito/BJL01_EngSoft_QA/blob/main/reports/03/entryDir.png?raw=true)
 
 Somando essas duas pistas entende-se que o dano só é aplicado caso a direção de contado entre o jogador e o inimigo tenha o componente vertical menor que .5
-Sendo assim, apenas quando o jogador encosta no inimigo por baixo ou pelos lados
+
+Sendo assim, apenas quando o jogador encosta no inimigo por baixo ou pelos lados que ele sofrerá dano
 
 ![direções que se aplicaria dano](https://github.com/hfsaito/BJL01_EngSoft_QA/blob/main/reports/03/dir-dano.png?raw=true)
 
