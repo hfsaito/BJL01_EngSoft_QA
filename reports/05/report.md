@@ -19,3 +19,5 @@ Ao verificar o script `Assets/MyAssets/Scripts/Vida.cs` é possível ver que o m
 
 ## Correção
 Chamar o método `Destroy` dentro do método `OnTriggerEnter2D` passando `gameObject` como argumento, já que está no contexto do item vida `gameObject` irá se referir ao próprio objeto em que o script está presente.
+
+https://github.com/hfsaito/BJL01_EngSoft_QA/commit/7c8862975932aebcf1fa7067d27d5e48c5306f35

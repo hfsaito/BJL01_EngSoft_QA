@@ -26,3 +26,5 @@ Verificando o método `MudarVida` no script `Assets/MyAssets/Scripts/Player.cs` 
 
 ## Correção
 Utilizar a função `Math.Clamp` ou estatégia similar para evitar que os pontos de vida ultrapassem os limites
+
+https://github.com/hfsaito/BJL01_EngSoft_QA/commit/5e4bea882a1e93b51c1ca26d002eef03ef5fbd5d
