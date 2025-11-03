@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     [SerializeField] protected internal int vidaMaxima = 3;
     [SerializeField] protected internal int vida = 3;
     public UnityEvent OnLifeChanged;
-    
+
     protected internal int moedas = 0;
     public UnityEvent OnCoinCollected;
 
@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
         animator = transform.GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        
+
         OnLifeChanged.AddListener(GameObject.FindGameObjectWithTag("UI").GetComponent<UIController>().SetVida);
     }
 
@@ -60,7 +60,10 @@ public class Player : MonoBehaviour
 
     private void HandleJumping()
     {
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.Space) && jumpAmount > 0)
+        if (
+            (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
+            && jumpAmount > 0
+        )
         {
             jumpAmount--;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
@@ -69,7 +72,7 @@ public class Player : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1f, LayerMask.GetMask("Ground"));
         if (hit.collider != null)
-        { 
+        {
             jumpAmount = maxJumpAmount;
         }
     }
