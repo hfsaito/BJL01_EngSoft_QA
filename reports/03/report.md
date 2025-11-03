@@ -1,12 +1,43 @@
-# Report 03 -
+# Report 03 - Dobro de dano ao cair na cabeça do inimigo
 ## Descrição
+A segunda instrução que o jogo passa é: _If you fall on enemy's head, it deals double damage_
+Porem ao cair na cabeça do inimigo o jogador não sofre dano algum
 
 ## Reprodução
+Pular na cabeça do inimigo próximo a segunda instrução
 
 ## Resultado Encrontrado
+Jogador não sofre dano
 
 ## Resultado Esperado
+Sofrer o dobro de dano
 
 ## Root cause
+No arquivo `Assets/MyAssets/Scripts/Inimigo.cs` podemos ver o método `OnTriggerEnter2D` que aplica o dano ao jogador quando o inimigo colide com ele
+```csharp
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "Player")
+        {
+            Vector3 entryDir = collision.transform.position - transform.position;
+            entryDir.Normalize();
+            if (entryDir.y < 0.5f)
+            {
+                collision.transform.GetComponent<Player>().MudarVida(-dano);
+            }
+        }
+    }
+```
+
+Já conseguimos ver que o dano duplo não está implementado
+
+Para entender melhor o vetor `entryDir` fiz o seguinte desenho
+
+![vetor entryDir](https://github.com/hfsaito/BJL01_EngSoft_QA/blob/main/reports/03/entryDir.png?raw=true)
+
+Somando essas duas pistas entende-se que o dano só é aplicado caso a direção de contado entre o jogador e o inimigo tenha o componente vertical menor que .5
+Sendo assim, apenas quando o jogador encosta no inimigo por baixo ou pelos lados
+
+![direções que se aplicaria dano](https://github.com/hfsaito/BJL01_EngSoft_QA/blob/main/reports/03/dir-dano.png?raw=true)
 
 ## Correção
