@@ -1,4 +1,8 @@
 # Report 03 - Dobro de dano ao cair na cabeça do inimigo
+- ID: \[Prog\] E003
+- Prioridade: Média
+  - Comportamento inesperado na jogabilidade
+
 ## Descrição
 A segunda instrução que o jogo passa é: _If you fall on enemy's head, it deals double damage_
 

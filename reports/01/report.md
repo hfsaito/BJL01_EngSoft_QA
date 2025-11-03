@@ -1,4 +1,8 @@
 # Report 01 - Queda de performance
+- ID: \[Prog\] E001
+- Prioridade: Alta
+  - Impede jogabilidade
+
 ## Descrição
 Performance do jogo cai após alguns segundos.
 

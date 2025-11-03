@@ -1,4 +1,8 @@
 # Report 02 - Pular com W
+- ID: \[Prog\] E002
+- Prioridade: Média
+  - Comportamento inesperado na jogabilidade
+
 ## Descrição
 Ao apertar `W` o personagem não pula apesar de aparecer a instrução para o jogador: _Press "W" or Space to jump_
 
