@@ -46,3 +46,5 @@ Faz mais sentido o jogador não sofrer dano se encostar por baixo, invertendo a 
 E adicionar o dano duplo em um ponto maior, minha sugestão é `entryDir.y > (Mathf.Sqrt(3) / 2)`, que é quando o angulo de contato é maior que 60 graus
 
 ![direções que se aplicaria dano corrigido](https://github.com/hfsaito/BJL01_EngSoft_QA/blob/main/reports/03/fix.png?raw=true)
+
+https://github.com/hfsaito/BJL01_EngSoft_QA/commit/edd3be0500c86d8de5312627d93bcc350e98e787
